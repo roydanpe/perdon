@@ -14,6 +14,9 @@
             align-items: center;
             height: 100vh;
             background-color: #f2f2f2;
+            background-image: url('fondo.avif'); /* Añade la URL de tu imagen de fondo */
+            background-size: cover; /* Cubre todo el área del cuerpo */
+            background-position: center; /* Centra la imagen de fondo */
         }
         .top-image-container {
             position: absolute;
@@ -26,6 +29,9 @@
             height: auto;   /* Mantiene la proporción de la imagen */
             width: 200px;   /* Ajusta el ancho según sea necesario */
             transition: all 0.3s ease; /* Añadimos una transición suave */
+            border-radius: 50%; /* Hace que el contenedor tenga forma de círculo */
+            overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del círculo */
+            border: 4px solid #560028; /* Agrega un borde blanco de 4 píxeles alrededor de la imagen */
 
         }
         .top-image-container img:hover {
@@ -36,7 +42,7 @@
             margin-bottom: 20px;
             font-size: 24px;
             font-family: Arial, sans-serif;
-            color: #333;
+            color: #2c001f;
             text-align: center;
             max-width: 800px;
         }
@@ -74,12 +80,51 @@
         .container:hover .image-right {
             transform: translateX(-34%);
         }
+        .gif-corner {
+            position: absolute; /* Establece la posición absoluta para que los GIFs se posicionen con respecto al body */
+            width: 100px; /* Ancho del GIF */
+            height: 100px; /* Alto del GIF */
+        }
+
+        .top-left {
+            top: 0; /* Posiciona el GIF en la parte superior */
+            left: 0; /* Posiciona el GIF a la izquierda */
+        }
+
+        .top-right {
+            top: 0; /* Posiciona el GIF en la parte superior */
+            right: 0; /* Posiciona el GIF a la derecha */
+        }
+
+        .bottom-left {
+            bottom: 0; /* Posiciona el GIF en la parte inferior */
+            left: 0; /* Posiciona el GIF a la izquierda */
+        }
+
+        .bottom-right {
+            bottom: 0; /* Posiciona el GIF en la parte inferior */
+            right: 0; /* Posiciona el GIF a la derecha */
+        }
+        .top-left,
+        .top-right,
+        .bottom-left,
+        .bottom-right {
+            cursor: pointer; /* Cambia el cursor al pasar sobre los GIFs */
+        }
+
+        .gif-corner:hover {
+            transform: scale(1.1); /* Efecto de escala al pasar el cursor sobre los GIFs */
+        }
     </style>
 </head>
 <body>
     <div class="top-image-container">
         <img src="corazon.jpeg" alt="Imagen superior">
     </div>
+    <img class="gif-corner top-left" src="gif2.gif" alt="GIF en la esquina superior izquierda"onmouseover="this.src='8.jpg'" onmouseout="this.src='gif2.gif'">
+    <img class="gif-corner top-right" src="gif3.gif" alt="GIF en la esquina superior derecha"onmouseover="this.src='1.png'" onmouseout="this.src='gif3.gif'">
+    <img class="gif-corner bottom-left" src="gif.gif" alt="GIF en la esquina inferior izquierda"onmouseover="this.src='6.jpg'" onmouseout="this.src='gif.gif'">
+    <img class="gif-corner bottom-right" src="gif1.gif" alt="GIF en la esquina inferior derecha"onmouseover="this.src='4.jpg'" onmouseout="this.src='gif1.gif'">
     <div class="message"> Amor, sé que he cometido un error terrible, pero lo que siento por ti es sincero. Perdóname y déjame demostrarte que puedo ser la persona que mereces.</div>
     <div class="container">
         <img class="image-left" src="pocoyo.png" alt="Imagen izquierda">
